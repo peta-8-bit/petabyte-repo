@@ -1,5 +1,23 @@
-#Chapter-4:Coin flip problem
+#chapter-4:Picture grid problem
+grid = [['.', '.', '.', '.', '.', '.'],
+        ['.', 'O', 'O', '.', '.', '.'],
+        ['O', 'O', 'O', 'O', '.', '.'],
+        ['O', 'O', 'O', 'O', 'O', '.'],
+        ['.', 'O', 'O', 'O', 'O', 'O'],
+        ['O', 'O', 'O', 'O', 'O', '.'],
+        ['O', 'O', 'O', 'O', '.', '.'],
+        ['.', 'O', 'O', '.', '.', '.'],
+        ['.', '.', '.', '.', '.', '.']]
 
+for i in range(6):
+    row=''
+    for j in range(9):
+        row+=str(grid[j][i])
+    print(row)
+
+
+#Chapter-4:Coin flip problem
+'''
 import random
 import re
 numberOfStreaks = 0
@@ -12,9 +30,7 @@ c=pat.finditer(y)
 c_pos=[match.start() for match in c]
 print("Chance of streak: ",(len(c_pos))/10000)   
 
-    # Code that checks if there is a streak of 6 heads or tails in a row.
-#print('Chance of streak: %s%%' % (numberOfStreaks))
-
+'''
 '''
 #Chapter-7:Project: Date Detection
 import re
