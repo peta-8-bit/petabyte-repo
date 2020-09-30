@@ -1,4 +1,4 @@
-#chapter-4:Picture grid problem
+'''#chapter-4:Picture grid problem
 grid = [['.', '.', '.', '.', '.', '.'],
         ['.', 'O', 'O', '.', '.', '.'],
         ['O', 'O', 'O', 'O', '.', '.'],
@@ -15,22 +15,25 @@ for i in range(6):
         row+=str(grid[j][i])
     print(row)
 
-
-#Chapter-4:Coin flip problem
 '''
+'''
+#Chapter-4:Coin flip problem
+
 import random
-import re
 numberOfStreaks = 0
+s=''
+y=0
 x=[]
 for experimentNumber in range(10000):
-    x.append(str(random.randint(0,1)))
-    pat=re.compile(r'000000|111111')
-y=''.join(x)
-c=pat.finditer(y)
-c_pos=[match.start() for match in c]
-print("Chance of streak: ",(len(c_pos))/10000)   
-
+    for i in range(100):
+        s+=(str(random.randint(0,1)))
+    x.append(s)
+    x[experimentNumber]=x[experimentNumber].replace('000000','h')
+    x[experimentNumber]=x[experimentNumber].replace('111111','t')
+    y+=x[experimentNumber].count('h')+x[experimentNumber].count('t')
+print("Chance of streak: ",y/100)   
 '''
+
 '''
 #Chapter-7:Project: Date Detection
 import re
