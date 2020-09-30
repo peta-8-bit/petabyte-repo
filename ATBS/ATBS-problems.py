@@ -1,3 +1,21 @@
+#Chapter-4:Coin flip problem
+
+import random
+import re
+numberOfStreaks = 0
+x=[]
+for experimentNumber in range(10000):
+    x.append(str(random.randint(0,1)))
+    pat=re.compile(r'000000|111111')
+y=''.join(x)
+c=pat.finditer(y)
+c_pos=[match.start() for match in c]
+print("Chance of streak: ",(len(c_pos))/10000)   
+
+    # Code that checks if there is a streak of 6 heads or tails in a row.
+#print('Chance of streak: %s%%' % (numberOfStreaks))
+
+'''
 #Chapter-7:Project: Date Detection
 import re
 
@@ -26,3 +44,4 @@ for i,j in zip(year,day):
 print("\nYou entered : ",date)
 if flag==0:
     print("\nValid Date")
+'''
